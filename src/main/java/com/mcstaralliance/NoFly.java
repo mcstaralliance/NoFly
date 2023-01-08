@@ -21,7 +21,7 @@ public class NoFly extends JavaPlugin implements Listener {
         Player player = event.getPlayer();
         if (player.isOp() || player.getGameMode() == GameMode.CREATIVE)
             return;
-        if (!player.getName().equalsIgnoreCase("fireland"))
+        if (!player.getWorld().getName().equalsIgnoreCase("fireland"))
             return;
         player.setFlying(false);
         player.sendMessage("§b[§c小域§b] §c此世界禁止飞行。");
